@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <div class="bg-img" style="
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;">
+        <div class="pad" style="padding-left: 500px;
+        padding-right: 500px;">
+    <form class="form-signin ">
+        <div class="text-center mb-4">
+            <div class="imgpad" style=" padding-top: 40px;">
+          <img class="mb-4" src="" alt="" width="72" height="72">
+        </div>
+          <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+          <p>Grab the seat of your wanted show and enjoy with your mates</p>
+        </div>
+    
+    
+        <div class="form-label-group mx">
+        <input type="text" class="form-control" placeholder="Enter Your Name" v-model="name">
+        <label for="inputEmail">Enter Name:</label>
+      </div>
+    
+      
+        <div class="form-label-group mx">
+          <input type="email"class="form-control" placeholder="Email address" v-model="adminemail">
+          <label for="inputEmail">Email address</label>
+        </div>
+      
+        <div class="form-label-group">
+          <input type="password"  class="form-control" placeholder="Password" v-model="adminpassword">
+          <label for="inputPassword">Password</label>
+        </div>
+      
+      
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        
+        <div class="but" style="padding-left: 40px;
+        padding-right: 25px;">
+        <button class="btn btn-lg btn-dark btn-sm" v-on:click="AdminLogin">Admin-Login</button>
+        <button class="btn btn-lg btn-dark btn-sm" v-on:click="UserLogin">User-Login</button>
+        </div>
+        <p class="mt-5 mb-3 text-muted text-center">© 2023-2025</p>
+      </form>
+    </div>
+    </div>
+        </div>
+</body>
+</html>
