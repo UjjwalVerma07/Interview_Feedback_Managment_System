@@ -41,8 +41,8 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))  // Proper CORS Handling
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/auth/login", "/auth/register", "/error").permitAll() // Allow access to /error
-                .requestMatchers("/interviews/**").hasAuthority("ROLE_HR_MANAGER") 
-                .requestMatchers("/feedback/**").hasAuthority("ROLE_HR_MANAGER") 
+                .requestMatchers("/interviews/**").hasAnyAuthority("ROLE_HR_MANAGER","ROLE_INTERVIEWER") 
+                .requestMatchers("/feedback/**").hasAnyAuthority("ROLE_HR_MANAGER","ROLE_INTERVIEWER") 
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

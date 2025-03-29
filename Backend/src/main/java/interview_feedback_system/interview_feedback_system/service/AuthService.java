@@ -53,8 +53,11 @@ public class AuthService {
                 System.out.println("Alice"+passwordEncoder.encode("securepassword"));
                 if (passwordEncoder.matches(loginRequest.getPassword(), user.get().getPassword())) {
                     String token = jwtUtil.generateToken(loginRequest.getEmail());
-                    System.out.println("Login successful! JWT Token generated.");
-                    return new LoginResponse(token, "Login successful");
+                    // System.out.println("Login successful! JWT Token generated.");
+                    //Here we also want the 
+                    Role role=user.get().getRole();
+                    String rolee=role.toString();
+                    return new LoginResponse(token, "Login successful",rolee);
                 } else {
                     System.out.println("Incorrect password for: " + loginRequest.getEmail());
                     throw new RuntimeException("Invalid credentials from Ujjwal");
