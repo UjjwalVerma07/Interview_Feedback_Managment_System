@@ -43,6 +43,7 @@ public class SecurityConfig {
                 .requestMatchers("/auth/login", "/auth/register", "/error").permitAll() // Allow access to /error
                 .requestMatchers("/interviews/**").hasAnyAuthority("ROLE_HR_MANAGER","ROLE_INTERVIEWER") 
                 .requestMatchers("/feedback/**").hasAnyAuthority("ROLE_HR_MANAGER","ROLE_INTERVIEWER") 
+                // .requestMatchers("/mlpredicition").hasAnyAuthority("ROLE_HR_MANAGER","ROLE_INTERVIEWER")
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
